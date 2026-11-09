@@ -1,0 +1,287 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f6fa;
+    color: #222;
+}
+
+header {
+    background: #10152b;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    font-size: 25px;
+}
+
+nav h2 span {
+    color: #8b5cf6;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+.inicio {
+    height: 500px;
+    background: linear-gradient(rgba(10, 15, 40, .8), rgba(10, 15, 40, .8)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.contenido {
+    max-width: 650px;
+}
+
+.contenido h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.contenido h1 span {
+    color: #a78bfa;
+}
+
+.contenido p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background: #8055e8;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.boton:hover {
+    background: #6336c7;
+}
+
+.seccion {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.seccion h2,
+.evolucion h2,
+.importancia h2 {
+    color: #24264a;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.origen {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    text-align: left;
+    margin-top: 35px;
+}
+
+.origen img {
+    width: 45%;
+    border-radius: 12px;
+}
+
+.origen h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #7046ce;
+}
+
+.origen p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.evolucion {
+    background: #e9e8f8;
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.descripcion {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.linea {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.etapa {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-bottom: 4px solid #8055e8;
+}
+
+.etapa h3 {
+    color: #7046ce;
+    margin-bottom: 15px;
+}
+
+.etapa p {
+    line-height: 1.6;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    transition: .3s;
+    text-align: left;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.tarjeta h3 {
+    color: #7046ce;
+    padding: 15px 15px 5px;
+}
+
+.tarjeta p {
+    padding: 10px 15px 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.importancia {
+    background: #171b38;
+    color: white;
+    padding: 65px 12%;
+    text-align: center;
+}
+
+.importancia h2 {
+    color: #a78bfa;
+}
+
+.importancia p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.recursos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.recursos a {
+    background: #8055e8;
+    color: white;
+    padding: 16px 22px;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.recursos a:hover {
+    background: #6336c7;
+}
+
+footer {
+    background: #10152b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    line-height: 2;
+}
+
+footer h3 {
+    color: #a78bfa;
+}
+
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contenido h1 {
+        font-size: 35px;
+    }
+
+    .origen {
+        flex-direction: column;
+    }
+
+    .origen img {
+        width: 100%;
+    }
+
+    .linea {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .linea,
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+}
